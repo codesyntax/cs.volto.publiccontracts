@@ -6,6 +6,12 @@
   <configure zcml:condition="installed AccessControl.security">
   <!-- -*- extra stuff goes here -*- -->
 
+    <permission
+        id="cs.volto.publiccontracts.AddContract"
+        title="cs.volto.publiccontracts: Add Contract"
+    />
+
+
 
   </configure>
 
