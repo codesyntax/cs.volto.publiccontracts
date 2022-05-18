@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from cs.volto.publiccontracts.content.contract import IContract
 from plone.dexterity.interfaces import IDexterityContent
 from plone.indexer import indexer
+
+from cs.volto.publiccontracts.content.contract import IContract
 
 
 @indexer(IDexterityContent)
