@@ -3,4 +3,5 @@
   <property name="title">Controls the available contenttypes in your portal</property>
   <!--<object name="example_ct" meta_type="Dexterity FTI"/>-->
   <object name="Contract" meta_type="Dexterity FTI"/>
+  <object name="ContractsFolder" meta_type="Dexterity FTI"/>
 </object>

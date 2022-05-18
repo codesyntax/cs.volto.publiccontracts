@@ -7,6 +7,12 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <permission
+        id="cs.volto.publiccontracts.AddContractsFolder"
+        title="cs.volto.publiccontracts: Add ContractsFolder"
+    />
+
+
+    <permission
         id="cs.volto.publiccontracts.AddContract"
         title="cs.volto.publiccontracts: Add Contract"
     />
