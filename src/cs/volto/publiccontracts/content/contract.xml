@@ -5,5 +5,26 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="cs.volto.publiccontracts">
   <schema>
+    <field name="file_number" type="zope.schema.TextLine">
+      <title i18n:translate="">File number</title>
+      <description i18n:translate=""></description>
+      <required>False</required>
+      <default></default>
+      <readonly>False</readonly>
+    </field>
+    <field name="last_date" type="zope.schema.Datetime">
+      <title i18n:translate="">last_date</title>
+      <description i18n:translate="">description</description>
+      <required>True</required>
+      <default></default>
+      <readonly>False</readonly>
+    </field>
+    <field name="dates" type="plone.schema.jsonfield.JSONField">
+      <title i18n:translate="">dates</title>
+      <description i18n:translate="">description</description>
+      <required>False</required>
+      <default></default>
+      <readonly>False</readonly>
+    </field>
   </schema>
 </model>
