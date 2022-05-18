@@ -6,8 +6,9 @@ from zope.globalrequest import getRequest
 from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm, SimpleVocabulary
-
+from plone import api
 from cs.volto.publiccontracts import _
+from Acquisition import aq_parent
 
 
 class VocabItem(object):
@@ -18,22 +19,29 @@ class VocabItem(object):
 
 @implementer(IVocabularyFactory)
 class StatesVocabulary(object):
-    """
-    """
+    """ """
 
     def __call__(self, context):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
-        items = [
-            VocabItem(u'sony-a7r-iii', _(u'Sony Aplha 7R III')),
-            VocabItem(u'canon-5d-iv', _(u'Canon 5D IV')),
-        ]
 
         # Fix context if you are using the vocabulary in DataGridField.
         # See https://github.com/collective/collective.z3cform.datagridfield/issues/31:  # NOQA: 501
         if not IDexterityContent.providedBy(context):
             req = getRequest()
             context = req.PARENTS[0]
+
+        putils = api.portal.get_tool("plone_utils")
+        try:
+            contracts_states = context.states
+            if contracts_states:
+                item_values = contracts_states["items"]
+            items = [
+                VocabItem(putils.normalizeString(i["value"]), i["title"])
+                for i in item_values
+            ]
+        except:
+            items = []
 
         # create a list of SimpleTerm items:
         terms = []

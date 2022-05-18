@@ -7,7 +7,6 @@
   <schema>
     <field name="states" type="plone.schema.jsonfield.JSONField">
       <title i18n:translate="">states</title>
-      <description i18n:translate="">description</description>
       <required>True</required>
       <default></default>
       <readonly>False</readonly>

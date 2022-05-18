@@ -7,32 +7,28 @@
   <schema>
     <field name="file_number" type="zope.schema.TextLine">
       <title i18n:translate="">File number</title>
-      <description i18n:translate=""></description>
       <required>False</required>
       <default></default>
       <readonly>False</readonly>
     </field>
     <field name="last_date" type="zope.schema.Datetime">
       <title i18n:translate="">last_date</title>
-      <description i18n:translate="">description</description>
       <required>True</required>
       <default></default>
       <readonly>False</readonly>
     </field>
     <field name="dates" type="plone.schema.jsonfield.JSONField">
       <title i18n:translate="">dates</title>
-      <description i18n:translate="">description</description>
       <required>False</required>
       <default></default>
       <readonly>False</readonly>
     </field>
-    <!-- <field name="state" type="zope.schema.Choice">
+    <field name="state" type="zope.schema.Choice">
       <title i18n:translate="">state</title>
-      <description i18n:translate=""></description>
-      <vocabulary>plone.app.vocabularies.PortalTypes</vocabulary>
+      <vocabulary>cs.volto.publiccontracts.StatesVocabulary</vocabulary>
       <default></default>
       <required>True</required>
       <readonly>False</readonly>
-    </field> -->
+    </field>
   </schema>
 </model>
