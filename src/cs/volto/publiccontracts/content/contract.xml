@@ -26,5 +26,13 @@
       <default></default>
       <readonly>False</readonly>
     </field>
+    <!-- <field name="state" type="zope.schema.Choice">
+      <title i18n:translate="">state</title>
+      <description i18n:translate=""></description>
+      <vocabulary>plone.app.vocabularies.PortalTypes</vocabulary>
+      <default></default>
+      <required>True</required>
+      <readonly>False</readonly>
+    </field> -->
   </schema>
 </model>
