@@ -18,4 +18,11 @@
       directory="static"
       />
 
+  <browser:page
+    name="import_public_contracts"
+    for="cs.volto.publiccontracts.content.contracts_folder.IContractsFolder"
+    class=".import_public_contracts.ImportView"
+    permission="cmf.ManagePortal"
+    />
+
 </configure>
