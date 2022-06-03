@@ -31,7 +31,10 @@
 cs.volto.publiccontracts
 ========================
 
-Tell me what your product does
+
+Plone product to represent public contracts and publish in a Plone site.
+
+This product should be used with [volto-publiccontracts-theme](https://github.com/codesyntax/volto-publiccontacts-theme) as frontend
 
 Features
 --------
